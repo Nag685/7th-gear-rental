@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>7th Gear | Riding Gear Rentals</title>
+
+<meta name="description"
+content="7th Gear - Riding Gear Rentals in Jayanagar, Bengaluru. Jackets, helmets, riding shoes, gloves and more.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8,8,8,.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ccc;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.88)),
+        url("https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1800");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 140px 25px 80px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #555;
+    padding: 8px 17px;
+    border-radius: 30px;
+    color: #ddd;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 11vw, 130px);
+    line-height: .85;
+    font-weight: 900;
+    letter-spacing: -6px;
+}
+
+.hero h1 span {
+    color: #e63946;
+}
+
+.hero h2 {
+    margin-top: 25px;
+    font-size: clamp(24px, 4vw, 42px);
+    font-weight: 400;
+}
+
+.hero p {
+    max-width: 600px;
+    margin-top: 20px;
+    color: #bbb;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-red {
+    background: #e63946;
+}
+
+.btn-red:hover {
+    background: #ff4d5a;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid #555;
+}
+
+.btn-outline:hover {
+    border-color: #e63946;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 100px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading small {
+    color: #e63946;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-size: 44px;
+    margin-top: 8px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 15px auto;
+    color: #999;
+}
+
+/* PRODUCTS */
+
+.products {
+    background: #101010;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #181818;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #e63946;
+}
+
+.product-image {
+    height: 270px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.product-card:hover img {
+    transform: scale(1.06);
+}
+
+.product-info {
+    padding: 24px;
+}
+
+.product-info h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #999;
+    font-size: 14px;
+    min-height: 45px;
+}
+
+.price {
+    margin: 18px 0;
+    color: #e63946;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* WHY */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-card {
+    padding: 35px;
+    background: #121212;
+    border: 1px solid #292929;
+    border-radius: 15px;
+}
+
+.why-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    color: #999;
+}
+
+/* PROCESS */
+
+.process {
+    background: #101010;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.step {
+    text-align: center;
+    padding: 30px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e63946;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto 20px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.step p {
+    color: #999;
+    margin-top: 8px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text small {
+    color: #e63946;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-text h2 {
+    font-size: 48px;
+    line-height: 1;
+    margin: 15px 0 25px;
+}
+
+.about-text p {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DOCUMENTS */
+
+.documents {
+    background: #101010;
+}
+
+.document-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.document {
+    padding: 25px;
+    background: #181818;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.document-icon {
+    font-size: 30px;
+}
+
+.document-text {
+    flex: 1;
+}
+
+.document-text h3 {
+    font-size: 16px;
+}
+
+.document-text p {
+    color: #888;
+    font-size: 13px;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact-box small {
+    color: #e63946;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-box h2 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.contact-box p {
+    color: #999;
+}
+
+.location {
+    margin-top: 30px;
+    color: #bbb;
+    font-size: 17px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #222;
+    background: #050505;
+    text-align: center;
+    padding: 35px 20px;
+    color: #777;
+}
+
+footer strong {
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .product-grid,
+    .why-grid,
+    .steps,
+    .document-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+        letter-spacing: -4px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .about-text h2 {
+        font-size: 38px;
+    }
+
+    .contact-box h2 {
+        font-size: 36px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+<div class="nav-inner">
+
+<div class="logo">
+7TH <span>GEAR</span>
+</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#gear">Gear</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#process">How It Works</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+🏍️ Jayanagar, Bengaluru
+</div>
+
+<h1>
+7TH <span>GEAR</span>
+</h1>
+
+<h2>
+Riding Gear Rentals
+</h2>
+
+<p>
+Quality riding gear for your next adventure.
+Rent what you need, ride where you want.
+</p>
+
+<div class="buttons">
+
+<a href="#gear" class="btn btn-red">
+Explore Gear
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GEAR -->
+
+<section class="products" id="gear">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>Our Collection</small>
+
+<h2>Gear For Your Ride</h2>
+
+<p>
+Browse our riding gear collection. Product details and prices
+can be updated later.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- JACKET -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Riding Jackets">
+
+</div>
+
+<div class="product-info">
+
+<h3>Riding Jackets</h3>
+
+<p>
+Protective riding jackets available in different sizes.
+</p>
+
+<div class="price">
+₹XXX / Day
+</div>
+
+<a href="#contact" class="btn btn-red">
+Enquire
+</a>
+
+</div>
+
+</div>
+
+
+<!-- HELMET -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80"
+alt="Motorcycle Helmet">
+
+</div>
+
+<div class="product-info">
+
+<h3>Helmets</h3>
+
+<p>
+Motorcycle helmets available in different sizes.
+</p>
+
+<div class="price">
+₹XXX / Day
+</div>
+
+<a href="#contact" class="btn btn-red">
+Enquire
+</a>
+
+</div>
+
+</div>
+
+
+<!-- SHOES -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Riding Shoes">
+
+</div>
+
+<div class="product-info">
+
+<h3>Riding Shoes</h3>
+
+<p>
+Riding boots and shoes available in different sizes.
+</p>
+
+<div class="price">
+₹XXX / Day
+</div>
+
+<a href="#contact" class="btn btn-red">
+Enquire
+</a>
+
+</div>
+
+</div>
+
+
+<!-- GLOVES -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1558980664-10ea5f4d3f6f?auto=format&fit=crop&w=1000&q=80"
+alt="Riding Gear">
+
+</div>
+
+<div class="product-info">
+
+<h3>Riding Gloves</h3>
+
+<p>
+Comfortable riding gloves for everyday and long rides.
+</p>
+
+<div class="price">
+₹XXX / Day
+</div>
+
+<a href="#contact" class="btn btn-red">
+Enquire
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PANTS -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Motorcycle Gear">
+
+</div>
+
+<div class="product-info">
+
+<h3>Riding Pants</h3>
+
+<p>
+Protective riding pants available for rental.
+</p>
+
+<div class="price">
+₹XXX / Day
+</div>
+
+<a href="#contact" class="btn btn-red">
+Enquire
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ACCESSORIES -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1558980394-0c3e5b7f0c6f?auto=format&fit=crop&w=1000&q=80"
+alt="Motorcycle Accessories">
+
+</div>
+
+<div class="product-info">
+
+<h3>Accessories</h3>
+
+<p>
+Additional riding accessories available for rent.
+</p>
+
+<div class="price">
+₹XXX / Day
+</div>
+
+<a href="#contact" class="btn btn-red">
+Enquire
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- WHY 7TH GEAR -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>Why 7th Gear</small>
+
+<h2>Ride Prepared</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-icon">💰</div>
+
+<h3>Affordable Rentals</h3>
+
+<p>
+Rent the gear you need instead of purchasing equipment
+for occasional rides.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">🛡️</div>
+
+<h3>Ride Ready</h3>
+
+<p>
+Choose the equipment you need before heading out
+on your journey.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">📍</div>
+
+<h3>Jayanagar Location</h3>
+
+<p>
+Conveniently located in Jayanagar, Bengaluru.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="process" id="process">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>Simple Process</small>
+
+<h2>How It Works</h2>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-number">1</div>
+
+<h3>Choose Your Gear</h3>
+
+<p>
+Browse the gear available for rent.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>Send an Enquiry</h3>
+
+<p>
+Contact us through WhatsApp or phone.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>Pick Up & Ride</h3>
+
+<p>
+Collect your gear and get ready for your ride.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<small>ABOUT 7TH GEAR</small>
+
+<h2>
+Gear Up.<br>
+Ride More.
+</h2>
+
+<p>
+7th Gear is a riding gear rental service based in
+Jayanagar, Bengaluru.
+</p>
+
+<p>
+Whether you're planning a weekend ride, a long motorcycle
+trip or simply need riding equipment for a short period,
+we're here to help.
+</p>
+
+<a href="#contact" class="btn btn-red">
+Get In Touch
+</a>
+
+</div>
+
+
+<div class="about-image">
+
+<img
+src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1400"
+alt="7th Gear Riding Equipment">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DOCUMENTS -->
+
+<section class="documents">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>Customer Information</small>
+
+<h2>Documents & Information</h2>
+
+<p>
+Important information for customers will be available here.
+</p>
+
+</div>
+
+
+<div class="document-grid">
+
+
+<div class="document">
+
+<div class="document-icon">📄</div>
+
+<div class="document-text">
+
+<h3>Rental Price List</h3>
+
+<p>Coming soon</p>
+
+</div>
+
+</div>
+
+
+<div class="document">
+
+<div class="document-icon">📋</div>
+
+<div class="document-text">
+
+<h3>Rental Terms</h3>
+
+<p>Coming soon</p>
+
+</div>
+
+</div>
+
+
+<div class="document">
+
+<div class="document-icon">📏</div>
+
+<div class="document-text">
+
+<h3>Size Guide</h3>
+
+<p>Coming soon</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<small>CONTACT 7TH GEAR</small>
+
+<h2>
+Ready For Your Next Ride?
+</h2>
+
+<p>
+Contact us to check availability, pricing and rental details.
+</p>
+
+
+<div class="buttons" style="justify-content:center;">
+
+<!-- CHANGE THE NUMBER LATER -->
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+class="btn btn-red">
+
+💬 WhatsApp Us
+
+</a>
+
+
+<a
+href="tel:+91XXXXXXXXXX"
+class="btn btn-outline">
+
+📞 Call Us
+
+</a>
+
+</div>
+
+
+<div class="location">
+
+📍 Jayanagar, Bengaluru, Karnataka
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<strong>7TH GEAR</strong>
+
+<p>
+Riding Gear Rentals • Jayanagar, Bengaluru
+</p>
+
+<p style="margin-top:10px;">
+© 2026 7th Gear. All rights reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>
