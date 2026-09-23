@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/7thgear",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
