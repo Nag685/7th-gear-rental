@@ -2,1109 +2,278 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>7th Gear | Riding Gear Rentals</title>
-
-<meta name="description"
-content="7th Gear - Riding Gear Rentals in Jayanagar, Bengaluru. Jackets, helmets, riding shoes, gloves and more.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7th Gear – Riding Gear Rentals in Jayanagar, Bengaluru</title>
+<meta name="description" content="Rent riding jackets, helmets, gloves, boots and pants in Jayanagar, Bengaluru. Ride safe without buying a full kit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #080808;
-    color: #fff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* NAVBAR */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(8,8,8,.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #222;
-}
-
-.nav-inner {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: #e63946;
-}
-
-.nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: #ccc;
-    font-size: 14px;
-    transition: .3s;
-}
-
-.nav-links a:hover {
-    color: #e63946;
-}
-
-/* HERO */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-
-    background:
-        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.88)),
-        url("https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1800");
-
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-content {
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    padding: 140px 25px 80px;
-}
-
-.badge {
-    display: inline-block;
-    border: 1px solid #555;
-    padding: 8px 17px;
-    border-radius: 30px;
-    color: #ddd;
-    margin-bottom: 25px;
-    font-size: 14px;
-}
-
-.hero h1 {
-    font-size: clamp(65px, 11vw, 130px);
-    line-height: .85;
-    font-weight: 900;
-    letter-spacing: -6px;
-}
-
-.hero h1 span {
-    color: #e63946;
-}
-
-.hero h2 {
-    margin-top: 25px;
-    font-size: clamp(24px, 4vw, 42px);
-    font-weight: 400;
-}
-
-.hero p {
-    max-width: 600px;
-    margin-top: 20px;
-    color: #bbb;
-    font-size: 18px;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 32px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 24px;
-    border-radius: 7px;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.btn-red {
-    background: #e63946;
-}
-
-.btn-red:hover {
-    background: #ff4d5a;
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    border: 1px solid #555;
-}
-
-.btn-outline:hover {
-    border-color: #e63946;
-}
-
-/* SECTIONS */
-
-section {
-    padding: 100px 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 55px;
-}
-
-.section-heading small {
-    color: #e63946;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.section-heading h2 {
-    font-size: 44px;
-    margin-top: 8px;
-}
-
-.section-heading p {
-    max-width: 650px;
-    margin: 15px auto;
-    color: #999;
-}
-
-/* PRODUCTS */
-
-.products {
-    background: #101010;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.product-card {
-    background: #181818;
-    border: 1px solid #292929;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: .35s;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    border-color: #e63946;
-}
-
-.product-image {
-    height: 270px;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .5s;
-}
-
-.product-card:hover img {
-    transform: scale(1.06);
-}
-
-.product-info {
-    padding: 24px;
-}
-
-.product-info h3 {
-    font-size: 23px;
-    margin-bottom: 8px;
-}
-
-.product-info p {
-    color: #999;
-    font-size: 14px;
-    min-height: 45px;
-}
-
-.price {
-    margin: 18px 0;
-    color: #e63946;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* WHY */
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.why-card {
-    padding: 35px;
-    background: #121212;
-    border: 1px solid #292929;
-    border-radius: 15px;
-}
-
-.why-icon {
-    font-size: 38px;
-    margin-bottom: 15px;
-}
-
-.why-card h3 {
-    margin-bottom: 8px;
-}
-
-.why-card p {
-    color: #999;
-}
-
-/* PROCESS */
-
-.process {
-    background: #101010;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-}
-
-.step {
-    text-align: center;
-    padding: 30px;
-}
-
-.step-number {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #e63946;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto auto 20px;
-    font-size: 21px;
-    font-weight: bold;
-}
-
-.step p {
-    color: #999;
-    margin-top: 8px;
-}
-
-/* ABOUT */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.about-text small {
-    color: #e63946;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.about-text h2 {
-    font-size: 48px;
-    line-height: 1;
-    margin: 15px 0 25px;
-}
-
-.about-text p {
-    color: #aaa;
-    margin-bottom: 15px;
-}
-
-.about-image {
-    height: 420px;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* DOCUMENTS */
-
-.documents {
-    background: #101010;
-}
-
-.document-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-}
-
-.document {
-    padding: 25px;
-    background: #181818;
-    border: 1px solid #292929;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.document-icon {
-    font-size: 30px;
-}
-
-.document-text {
-    flex: 1;
-}
-
-.document-text h3 {
-    font-size: 16px;
-}
-
-.document-text p {
-    color: #888;
-    font-size: 13px;
-}
-
-/* CONTACT */
-
-.contact {
-    text-align: center;
-}
-
-.contact-box {
-    max-width: 750px;
-    margin: auto;
-}
-
-.contact-box small {
-    color: #e63946;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.contact-box h2 {
-    font-size: 48px;
-    margin: 15px 0;
-}
-
-.contact-box p {
-    color: #999;
-}
-
-.location {
-    margin-top: 30px;
-    color: #bbb;
-    font-size: 17px;
-}
-
-/* FOOTER */
-
-footer {
-    border-top: 1px solid #222;
-    background: #050505;
-    text-align: center;
-    padding: 35px 20px;
-    color: #777;
-}
-
-footer strong {
-    color: #fff;
-    letter-spacing: 2px;
-}
-
-/* MOBILE */
-
-@media(max-width:800px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .product-grid,
-    .why-grid,
-    .steps,
-    .document-grid,
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 70px;
-        letter-spacing: -4px;
-    }
-
-    .section-heading h2 {
-        font-size: 34px;
-    }
-
-    .about-text h2 {
-        font-size: 38px;
-    }
-
-    .contact-box h2 {
-        font-size: 36px;
-    }
-
-}
+:root{
+  --asphalt:#15130f; --panel:#1e1b16; --line:#3a352b;
+  --bone:#f1eadb; --muted:#b0a794; --amber:#ffb21f; --red:#e63946;
+  --head:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --body:"Barlow",Arial,Helvetica,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);background:var(--asphalt);color:var(--bone);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);line-height:1;text-transform:uppercase}
+
+/* ---------- Intro ---------- */
+#intro{position:fixed;inset:0;z-index:9999;background:#050505;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .9s ease,visibility .9s ease}
+#intro::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity 1s ease;
+  background:radial-gradient(circle at 50% 30%,rgba(255,190,90,.5),rgba(255,120,20,.15) 20%,transparent 55%)}
+#intro.on::before{opacity:1}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+.bulb-btn{position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:330px;background:none;border:0;cursor:pointer;color:inherit}
+.wire{position:absolute;top:0;left:50%;width:3px;height:120px;background:#4a4a4a;transform:translateX(-50%)}
+.bulb{position:absolute;top:115px;left:50%;transform:translateX(-50%);width:66px;height:78px;border-radius:50% 50% 45% 45%;background:#2b2b2b;border:3px solid #494949;transition:all .6s ease}
+.bulb::after{content:"";position:absolute;bottom:-19px;left:19px;width:26px;height:19px;border-radius:4px;background:#333;border:2px solid #555}
+#intro.on .bulb{background:#ffd36a;border-color:#fff0bd;box-shadow:0 0 25px #ffb52e,0 0 80px rgba(255,160,30,.8),0 0 150px rgba(255,120,20,.4)}
+.chain{position:absolute;top:196px;left:50%;width:3px;height:75px;background:#888;transform:translateX(-50%)}
+.chain::after{content:"";position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:#bbb;box-shadow:0 2px 8px #000}
+.chain.pull{animation:pull .5s ease}
+@keyframes pull{50%{transform:translateX(-50%) translateY(22px)}}
+.intro-content{position:relative;text-align:center;margin-top:130px;padding:0 20px}
+.intro-logo{font-family:var(--head);font-weight:800;font-size:clamp(56px,13vw,120px);letter-spacing:.08em;line-height:1;opacity:0;transform:translateY(20px);transition:all 1s ease}
+.intro-sub{margin-top:10px;color:var(--muted);letter-spacing:.25em;font-size:14px;opacity:0;transition:opacity 1s ease .2s}
+#intro.on .intro-logo,#intro.on .intro-sub{opacity:1;transform:none}
+.pull-text{margin-top:28px;color:#8a8474;font-size:13px;letter-spacing:.2em;transition:opacity .4s}
+#intro.on .pull-text{opacity:0;height:0;margin:0;overflow:hidden}
+.enter{display:inline-block;margin-top:32px;padding:14px 34px;border:2px solid var(--amber);border-radius:40px;background:transparent;color:var(--bone);font:600 15px var(--body);letter-spacing:.15em;cursor:pointer;opacity:0;pointer-events:none;transition:all .5s ease .4s}
+#intro.on .enter{opacity:1;pointer-events:auto}
+.enter:hover{background:var(--amber);color:#111}
+.skip{position:absolute;right:20px;bottom:20px;background:none;border:0;color:#777;font:14px var(--body);text-decoration:underline;cursor:pointer}
+.skip:hover{color:var(--bone)}
+
+/* ---------- Site ---------- */
+#site{display:none}
+#site.show{display:block}
+nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:rgba(21,19,15,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-family:var(--head);font-weight:800;font-size:26px;letter-spacing:.06em;text-decoration:none}
+.logo b{color:var(--amber)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;color:var(--muted);font-size:15px;font-weight:500}
+.links a:hover{color:var(--amber)}
+.links .nav-cta{color:#111;background:var(--amber);padding:9px 18px;border-radius:6px;font-weight:600}
+.links .nav-cta:hover{color:#111;background:#ffc44d}
+
+.wrap{padding:88px 6%;max-width:1240px;margin:0 auto}
+.hero{padding-top:70px;padding-bottom:70px}
+.hero h1{font-weight:800;font-size:clamp(60px,12vw,150px);letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p{max-width:520px;margin:26px 0 34px;font-size:19px;color:var(--muted)}
+.btn{display:inline-block;padding:14px 26px;border-radius:6px;background:var(--amber);color:#111;font-weight:600;text-decoration:none;margin:0 10px 10px 0;border:2px solid var(--amber);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--bone);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--bone)}
+
+/* gear shift indicator */
+.shift{display:flex;gap:6px;margin-top:56px;flex-wrap:wrap}
+.shift span{font-family:var(--head);font-weight:800;font-size:22px;width:44px;height:44px;display:grid;place-items:center;border:2px solid var(--line);border-radius:8px;color:var(--muted)}
+.shift span.n{color:#5f5a4c}
+.shift span.top{background:var(--amber);border-color:var(--amber);color:#111;box-shadow:0 0 24px rgba(255,178,31,.45)}
+
+h2{font-weight:800;font-size:clamp(38px,6vw,64px);margin-bottom:12px}
+.lead{color:var(--muted);max-width:560px;margin-bottom:44px}
+
+.gear{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column}
+.item svg{width:44px;height:44px;stroke:var(--amber);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:22px}
+.item h3{font-size:30px;font-weight:800;margin-bottom:8px}
+.item p{color:var(--muted);flex:1}
+.item a{margin-top:20px;color:var(--amber);font-weight:600;text-decoration:none;font-size:15px}
+.item a:hover{text-decoration:underline}
+
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.why h3{font-size:28px;font-weight:800;color:var(--amber);margin-bottom:10px}
+.why p{color:var(--muted)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s;list-style:none}
+.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px}
+.steps li::before{content:counter(s);font-family:var(--head);font-weight:800;font-size:54px;color:var(--amber);display:block;line-height:1;margin-bottom:12px}
+.steps h3{font-size:26px;font-weight:800;margin-bottom:6px}
+.steps p{color:var(--muted)}
+
+.faq{max-width:780px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--amber);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+
+.contact{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contact .wrap{text-align:center}
+.contact .lead{margin-left:auto;margin-right:auto}
+.addr{margin-top:24px;color:var(--muted)}
+footer{padding:28px 6%;text-align:center;color:#7a7364;font-size:14px}
+
+@media(max-width:860px){
+  .gear,.why,.steps{grid-template-columns:1fr}
+  .links a:not(.nav-cta){display:none}
+  .wrap{padding:64px 6%}
+  .why{gap:28px}
+}
+@media(max-width:520px){.gear{gap:14px}.shift span{width:38px;height:38px;font-size:19px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
-
 <body>
 
-<!-- NAVIGATION -->
-
-<nav class="navbar">
-
-<div class="nav-inner">
-
-<div class="logo">
-7TH <span>GEAR</span>
+<!-- Intro -->
+<div id="intro">
+  <button class="bulb-btn" id="bulbBtn" aria-label="Pull the chain to turn on the light">
+    <span class="wire"></span><span class="bulb"></span><span class="chain" id="chain"></span>
+  </button>
+  <div class="intro-content">
+    <div class="intro-logo">7TH GEAR</div>
+    <div class="intro-sub">RIDING GEAR RENTALS &bull; JAYANAGAR</div>
+    <div class="pull-text">PULL THE CHAIN</div>
+    <button class="enter" id="enterBtn" type="button">ENTER WEBSITE</button>
+  </div>
+  <button class="skip" id="skipBtn" type="button">Skip intro</button>
 </div>
 
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#gear">Gear</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#process">How It Works</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</div>
-
+<div id="site">
+<nav>
+  <a class="logo" href="#home">7TH <b>GEAR</b></a>
+  <div class="links">
+    <a href="#gear">Gear</a>
+    <a href="#how">How it works</a>
+    <a href="#faq">FAQ</a>
+    <a class="nav-cta" href="#contact">Book gear</a>
+  </div>
 </nav>
 
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<div class="badge">
-🏍️ Jayanagar, Bengaluru
-</div>
-
-<h1>
-7TH <span>GEAR</span>
-</h1>
-
-<h2>
-Riding Gear Rentals
-</h2>
-
-<p>
-Quality riding gear for your next adventure.
-Rent what you need, ride where you want.
-</p>
-
-<div class="buttons">
-
-<a href="#gear" class="btn btn-red">
-Explore Gear
-</a>
-
-<a href="#contact" class="btn btn-outline">
-Contact Us
-</a>
-
-</div>
-
-</div>
-
+<main>
+<section class="wrap hero" id="home">
+  <h1>Ride.<br><em>Gear up.</em><br>Go.</h1>
+  <p>Rent a jacket, helmet, gloves, boots and pants in Jayanagar, Bengaluru. Ride protected without buying a full kit.</p>
+  <a class="btn" href="#contact">Check availability</a>
+  <a class="btn ghost" href="#gear">See the gear</a>
+  <div class="shift" aria-hidden="true">
+    <span class="n">N</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span class="top">7</span>
+  </div>
 </section>
 
-
-<!-- GEAR -->
-
-<section class="products" id="gear">
-
-<div class="container">
-
-<div class="section-heading">
-
-<small>Our Collection</small>
-
-<h2>Gear For Your Ride</h2>
-
-<p>
-Browse our riding gear collection. Product details and prices
-can be updated later.
-</p>
-
-</div>
-
-
-<div class="product-grid">
-
-
-<!-- JACKET -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1000"
-alt="Riding Jackets">
-
-</div>
-
-<div class="product-info">
-
-<h3>Riding Jackets</h3>
-
-<p>
-Protective riding jackets available in different sizes.
-</p>
-
-<div class="price">
-₹XXX / Day
-</div>
-
-<a href="#contact" class="btn btn-red">
-Enquire
-</a>
-
-</div>
-
-</div>
-
-
-<!-- HELMET -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80"
-alt="Motorcycle Helmet">
-
-</div>
-
-<div class="product-info">
-
-<h3>Helmets</h3>
-
-<p>
-Motorcycle helmets available in different sizes.
-</p>
-
-<div class="price">
-₹XXX / Day
-</div>
-
-<a href="#contact" class="btn btn-red">
-Enquire
-</a>
-
-</div>
-
-</div>
-
-
-<!-- SHOES -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1000"
-alt="Riding Shoes">
-
-</div>
-
-<div class="product-info">
-
-<h3>Riding Shoes</h3>
-
-<p>
-Riding boots and shoes available in different sizes.
-</p>
-
-<div class="price">
-₹XXX / Day
-</div>
-
-<a href="#contact" class="btn btn-red">
-Enquire
-</a>
-
-</div>
-
-</div>
-
-
-<!-- GLOVES -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="https://images.unsplash.com/photo-1558980664-10ea5f4d3f6f?auto=format&fit=crop&w=1000&q=80"
-alt="Riding Gear">
-
-</div>
-
-<div class="product-info">
-
-<h3>Riding Gloves</h3>
-
-<p>
-Comfortable riding gloves for everyday and long rides.
-</p>
-
-<div class="price">
-₹XXX / Day
-</div>
-
-<a href="#contact" class="btn btn-red">
-Enquire
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PANTS -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1000"
-alt="Motorcycle Gear">
-
-</div>
-
-<div class="product-info">
-
-<h3>Riding Pants</h3>
-
-<p>
-Protective riding pants available for rental.
-</p>
-
-<div class="price">
-₹XXX / Day
-</div>
-
-<a href="#contact" class="btn btn-red">
-Enquire
-</a>
-
-</div>
-
-</div>
-
-
-<!-- ACCESSORIES -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="https://images.unsplash.com/photo-1558980394-0c3e5b7f0c6f?auto=format&fit=crop&w=1000&q=80"
-alt="Motorcycle Accessories">
-
-</div>
-
-<div class="product-info">
-
-<h3>Accessories</h3>
-
-<p>
-Additional riding accessories available for rent.
-</p>
-
-<div class="price">
-₹XXX / Day
-</div>
-
-<a href="#contact" class="btn btn-red">
-Enquire
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-</div>
+<section class="wrap" id="gear">
+  <h2>Gear for your ride</h2>
+  <p class="lead">Everything you need from head to toe. Ask about sizes and rental prices on WhatsApp.</p>
+  <div class="gear">
+    <article class="item">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 6l-9 6-4 14 7 2 2 14h22l2-14 7-2-4-14-9-6c-1 3-4 5-7 5s-6-2-7-5z"/></svg>
+      <h3>Riding jackets</h3><p>Armoured jackets for city rides and long trips.</p>
+      <a href="#" data-item="riding jacket">Ask about this &rarr;</a>
+    </article>
+    <article class="item">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 28c0-11 8-18 18-18s18 7 18 18v6H6z"/><path d="M6 28h22v-7h14"/></svg>
+      <h3>Helmets</h3><p>Full-face helmets in a range of sizes.</p>
+      <a href="#" data-item="helmet">Ask about this &rarr;</a>
+    </article>
+    <article class="item">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6h10v20h14c3 0 5 2 5 5v6H10c-2 0-4-2-4-4z"/><path d="M14 16h10"/></svg>
+      <h3>Riding boots</h3><p>Protective, comfortable footwear for the clutch and the road.</p>
+      <a href="#" data-item="riding boots">Ask about this &rarr;</a>
+    </article>
+    <article class="item">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 42V22l-4-8c-1-2 1-4 3-3l3 5V8c0-2 4-2 4 0v9V6c0-2 4-2 4 0v11V8c0-2 4-2 4 0v12l3-4c2-2 5 0 3 3l-5 12v15z"/></svg>
+      <h3>Gloves</h3><p>Grippy, padded gloves for everyday and long rides.</p>
+      <a href="#" data-item="riding gloves">Ask about this &rarr;</a>
+    </article>
+    <article class="item">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h24l3 36H27l-3-20-3 20H9z"/><path d="M12 12h24"/></svg>
+      <h3>Riding pants</h3><p>Knee and hip protection built into abrasion-resistant pants.</p>
+      <a href="#" data-item="riding pants">Ask about this &rarr;</a>
+    </article>
+    <article class="item">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></svg>
+      <h3>Accessories</h3><p>Extras like knee guards, rain covers and more.</p>
+      <a href="#" data-item="riding accessories">Ask about this &rarr;</a>
+    </article>
+  </div>
 </section>
 
-
-<!-- WHY 7TH GEAR -->
-
-<section>
-
-<div class="container">
-
-<div class="section-heading">
-
-<small>Why 7th Gear</small>
-
-<h2>Ride Prepared</h2>
-
-</div>
-
-
-<div class="why-grid">
-
-<div class="why-card">
-
-<div class="why-icon">💰</div>
-
-<h3>Affordable Rentals</h3>
-
-<p>
-Rent the gear you need instead of purchasing equipment
-for occasional rides.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="why-icon">🛡️</div>
-
-<h3>Ride Ready</h3>
-
-<p>
-Choose the equipment you need before heading out
-on your journey.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="why-icon">📍</div>
-
-<h3>Jayanagar Location</h3>
-
-<p>
-Conveniently located in Jayanagar, Bengaluru.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<section class="wrap">
+  <h2>Why 7th Gear</h2>
+  <p class="lead">Good gear matters, but you don't need to own it for a ride or two.</p>
+  <div class="why">
+    <div><h3>Try before you buy</h3><p>Not sure what suits you? Ride in it first and decide later.</p></div>
+    <div><h3>Pay only for the trip</h3><p>Rent only the pieces you need, for as long as you need them.</p></div>
+    <div><h3>Easy to reach</h3><p>Pick up and drop off in Jayanagar, Bengaluru.</p></div>
+  </div>
 </section>
 
-
-<!-- HOW IT WORKS -->
-
-<section class="process" id="process">
-
-<div class="container">
-
-<div class="section-heading">
-
-<small>Simple Process</small>
-
-<h2>How It Works</h2>
-
-</div>
-
-
-<div class="steps">
-
-<div class="step">
-
-<div class="step-number">1</div>
-
-<h3>Choose Your Gear</h3>
-
-<p>
-Browse the gear available for rent.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">2</div>
-
-<h3>Send an Enquiry</h3>
-
-<p>
-Contact us through WhatsApp or phone.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">3</div>
-
-<h3>Pick Up & Ride</h3>
-
-<p>
-Collect your gear and get ready for your ride.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<section class="wrap" id="how">
+  <h2>How it works</h2>
+  <p class="lead">Three steps from message to motorway.</p>
+  <ol class="steps">
+    <li><h3>Choose</h3><p>Pick the gear you need for your ride.</p></li>
+    <li><h3>Confirm</h3><p>Message us on WhatsApp to check size and availability.</p></li>
+    <li><h3>Ride</h3><p>Collect your gear in Jayanagar and head out.</p></li>
+  </ol>
 </section>
 
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="about-grid">
-
-<div class="about-text">
-
-<small>ABOUT 7TH GEAR</small>
-
-<h2>
-Gear Up.<br>
-Ride More.
-</h2>
-
-<p>
-7th Gear is a riding gear rental service based in
-Jayanagar, Bengaluru.
-</p>
-
-<p>
-Whether you're planning a weekend ride, a long motorcycle
-trip or simply need riding equipment for a short period,
-we're here to help.
-</p>
-
-<a href="#contact" class="btn btn-red">
-Get In Touch
-</a>
-
-</div>
-
-
-<div class="about-image">
-
-<img
-src="https://images.pexels.com/photos/28051514/pexels-photo-28051514.jpeg?auto=compress&cs=tinysrgb&w=1400"
-alt="7th Gear Riding Equipment">
-
-</div>
-
-</div>
-
-</div>
-
+<section class="wrap" id="faq">
+  <h2>Questions</h2>
+  <div class="faq">
+    <details><summary>How much does it cost?</summary><p>Prices depend on the item and rental length. Message us for a quote.</p></details>
+    <details><summary>Can I rent a full set?</summary><p>Yes. Rent a single piece or the full kit, from helmet to boots.</p></details>
+    <details><summary>Do I need to book ahead?</summary><p>Booking ahead is best, especially for weekends and long trips.</p></details>
+    <details><summary>What do I need to bring?</summary><p>Ask us when you book. We will tell you what is needed for pickup.</p></details>
+  </div>
 </section>
-
-
-<!-- DOCUMENTS -->
-
-<section class="documents">
-
-<div class="container">
-
-<div class="section-heading">
-
-<small>Customer Information</small>
-
-<h2>Documents & Information</h2>
-
-<p>
-Important information for customers will be available here.
-</p>
-
-</div>
-
-
-<div class="document-grid">
-
-
-<div class="document">
-
-<div class="document-icon">📄</div>
-
-<div class="document-text">
-
-<h3>Rental Price List</h3>
-
-<p>Coming soon</p>
-
-</div>
-
-</div>
-
-
-<div class="document">
-
-<div class="document-icon">📋</div>
-
-<div class="document-text">
-
-<h3>Rental Terms</h3>
-
-<p>Coming soon</p>
-
-</div>
-
-</div>
-
-
-<div class="document">
-
-<div class="document-icon">📏</div>
-
-<div class="document-text">
-
-<h3>Size Guide</h3>
-
-<p>Coming soon</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
 
 <section class="contact" id="contact">
-
-<div class="container">
-
-<div class="contact-box">
-
-<small>CONTACT 7TH GEAR</small>
-
-<h2>
-Ready For Your Next Ride?
-</h2>
-
-<p>
-Contact us to check availability, pricing and rental details.
-</p>
-
-
-<div class="buttons" style="justify-content:center;">
-
-<!-- CHANGE THE NUMBER LATER -->
-
-<a
-href="https://wa.me/91XXXXXXXXXX"
-target="_blank"
-class="btn btn-red">
-
-💬 WhatsApp Us
-
-</a>
-
-
-<a
-href="tel:+91XXXXXXXXXX"
-class="btn btn-outline">
-
-📞 Call Us
-
-</a>
-
-</div>
-
-
-<div class="location">
-
-📍 Jayanagar, Bengaluru, Karnataka
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="wrap">
+    <h2>Ready to ride?</h2>
+    <p class="lead">Tell us what you need and your dates. We will reply with availability and pricing.</p>
+    <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Message on WhatsApp</a>
+    <a class="btn ghost" id="tel" href="#">Call now</a>
+    <p class="addr">Jayanagar, Bengaluru</p>
+  </div>
 </section>
+</main>
 
+<footer>&copy; 2026 7th Gear &ndash; Riding Gear Rentals</footer>
+</div>
 
-<!-- FOOTER -->
+<script>
+/* ===== EDIT THIS: your number with country code, digits only ===== */
+var PHONE = "91XXXXXXXXXX";
 
-<footer>
+var intro = document.getElementById("intro");
+var site  = document.getElementById("site");
+var chain = document.getElementById("chain");
 
-<strong>7TH GEAR</strong>
+function msg(item){
+  var t = item ? "Hi 7th Gear, I'd like to rent a " + item + "." : "Hi 7th Gear, I'd like to check gear availability.";
+  return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(t);
+}
+document.getElementById("wa").href  = msg();
+document.getElementById("tel").href = "tel:+" + PHONE;
+document.querySelectorAll("[data-item]").forEach(function(a){
+  a.href = msg(a.dataset.item); a.target = "_blank"; a.rel = "noopener";
+});
 
-<p>
-Riding Gear Rentals • Jayanagar, Bengaluru
-</p>
+function lightOn(){
+  chain.classList.remove("pull"); void chain.offsetWidth; chain.classList.add("pull");
+  setTimeout(function(){ intro.classList.add("on"); document.getElementById("enterBtn").focus(); }, 250);
+}
+function enter(){
+  intro.classList.add("hide");
+  site.classList.add("show");
+  window.scrollTo(0,0);
+  try{ sessionStorage.setItem("seen7g","1"); }catch(e){}
+}
+document.getElementById("bulbBtn").addEventListener("click", lightOn);
+document.getElementById("enterBtn").addEventListener("click", enter);
+document.getElementById("skipBtn").addEventListener("click", enter);
 
-<p style="margin-top:10px;">
-© 2026 7th Gear. All rights reserved.
-</p>
-
-</footer>
-
-
+try{ if(sessionStorage.getItem("seen7g")){ intro.classList.add("hide"); site.classList.add("show"); } }catch(e){}
+</script>
 </body>
 </html>
