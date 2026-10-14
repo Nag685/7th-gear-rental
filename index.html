@@ -85,16 +85,26 @@ a{color:inherit}
 <script>
 /* ============ EDIT THIS PART ============ */
 const CONFIG = {
-  brand: "Your Brand",
+  brand: "7th Gear",
   phone: "+91 00000 00000",
   location: "Pickup: your address here",
 
   // Your GitHub repo that holds the photos (leave github empty to see demo placeholders)
-  github: "",          // e.g. "yourname"
-  repo: "",            // e.g. "bike-gear"
+  github: "Nag685",
+  repo: "7th-gear-rental",
   branch: "main",
 
-  // Each folder in your repo -> a section on the page
+  // Folder that holds all the photos, relative to this index.html
+  imageBase: "7thgear/",
+
+  // Tell the site which photo is which. One line per product:
+  // photos = [front photo, second photo (optional, shows on hover)]
+  products: [
+    // { cat: "jackets", name: "Black riding jacket", photos: ["1000028442.jpg", "1000028443.jpg"] },
+    // { cat: "gloves",  name: "Leather gloves",      photos: ["1000028450.jpg"] },
+  ],
+
+  // Sections on the page (cat above must match a folder name here)
   categories: [
     { folder: "jackets",     title: "Jackets",     blurb: "Riding jackets for every season.", rate: "" },
     { folder: "pants",       title: "Pants",       blurb: "Protective riding pants.",         rate: "" },
@@ -125,6 +135,11 @@ function group(files) {
 }
 
 async function load(c) {
+  if (CONFIG.products.length) {
+    return CONFIG.products.filter(p => p.cat === c.folder).map(p => ({
+      name: p.name, main: CONFIG.imageBase + p.photos[0], alt: p.photos[1] ? CONFIG.imageBase + p.photos[1] : null
+    }));
+  }
   if (!CONFIG.github || !CONFIG.repo) {
     return Array.from({ length: 4 }, (_, i) => ({ name: c.title.toLowerCase() + " " + (i + 1) }));
   }
@@ -191,4 +206,3 @@ init();
 </script>
 </body>
 </html>
-```
