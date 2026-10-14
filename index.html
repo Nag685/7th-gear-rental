@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,47 +18,47 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--hivis);outline-offset:3px}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:10;background:var(--tarmac);color:var(--lane);display:flex;align-items:center;gap:24px;padding:0 clamp(16px,4vw,56px);min-height:64px;overflow-x:auto;white-space:nowrap}
-.brand{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:26px;text-decoration:none;margin-right:auto}
+.nav{position:sticky;top:0;z-index:10;background:var(--tarmac);color:var(--lane);display:flex;align-items:center;gap:24px;padding:0 clamp(16px,4vw,56px);min-height:56px;overflow-x:auto;white-space:nowrap}
+.brand{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:24px;text-decoration:none;margin-right:auto}
 .nav a.pill{text-decoration:none;font-weight:600;padding:10px 4px;border-bottom:3px solid transparent}
 .nav a.pill:hover{border-color:var(--hivis)}
 .call{background:var(--hivis);color:var(--ink);text-decoration:none;font-weight:600;padding:11px 18px;border-radius:999px}
 
 /* hero */
-.hero{background:var(--tarmac);color:var(--lane);position:relative;overflow:hidden;padding:clamp(40px,7vw,96px) clamp(16px,4vw,56px) 120px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;min-height:82vh}
-.hero h1{font-size:clamp(72px,12.5vw,200px);letter-spacing:-.01em;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-.hero h1 span{display:block;-webkit-text-stroke:2px var(--lane);color:transparent}
-.hero p{max-width:440px;font-size:19px;color:#c8cbd0;margin:28px 0 32px}
-.btn{display:inline-block;background:var(--hivis);color:var(--ink);font-weight:600;text-decoration:none;padding:16px 28px;border-radius:999px;font-size:17px}
-.frame{aspect-ratio:4/5;background:#2a2e35 center/cover;transform:rotate(3deg);border:10px solid var(--lane);box-shadow:16px 16px 0 var(--hivis);display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:20px}
-.road{position:absolute;left:0;right:0;bottom:44px;height:6px;background:repeating-linear-gradient(90deg,var(--hivis) 0 56px,transparent 56px 104px)}
+.hero{background:var(--tarmac);color:var(--lane);position:relative;overflow:hidden;padding:clamp(32px,4vw,56px) clamp(16px,4vw,56px) 72px;display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(44px,6.5vw,92px);letter-spacing:-.01em;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 span{display:block;-webkit-text-stroke:1.5px var(--lane);color:transparent}
+.hero p{max-width:420px;font-size:17px;color:#c8cbd0;margin:20px 0 24px}
+.btn{display:inline-block;background:var(--hivis);color:var(--ink);font-weight:600;text-decoration:none;padding:13px 24px;border-radius:999px;font-size:16px}
+.frame{aspect-ratio:4/5;background:#2a2e35 center/cover;transform:rotate(3deg);border:6px solid var(--lane);box-shadow:10px 10px 0 var(--hivis);display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:20px}
+.road{position:absolute;left:0;right:0;bottom:28px;height:4px;background:repeating-linear-gradient(90deg,var(--hivis) 0 56px,transparent 56px 104px)}
 @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
 
 /* catalog */
-.cat{padding:clamp(48px,7vw,96px) 0 8px}
-.cat-head{display:flex;align-items:baseline;gap:20px;padding:0 clamp(16px,4vw,56px);margin-bottom:28px;flex-wrap:wrap}
-.cat-head h2{font-size:clamp(56px,8vw,120px)}
+.cat{padding:clamp(32px,4vw,48px) 0 4px}
+.cat-head{display:flex;align-items:baseline;gap:20px;padding:0 clamp(16px,4vw,56px);margin-bottom:18px;flex-wrap:wrap}
+.cat-head h2{font-size:clamp(36px,4.5vw,56px)}
 .cat-head p{margin:0;color:#4a4e55;max-width:360px}
 .count{font-weight:600;background:var(--ink);color:var(--lane);border-radius:999px;padding:4px 12px;font-size:14px}
 .row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(16px,4vw,56px) 28px}
-.card{flex:0 0 clamp(240px,26vw,340px);scroll-snap-align:start;margin:0}
+.card{flex:0 0 clamp(190px,19vw,240px);scroll-snap-align:start;margin:0}
 .pic{position:relative;aspect-ratio:4/5;background:var(--concrete);overflow:hidden;cursor:pointer;border:0;padding:0;width:100%;display:block}
 .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
 .pic img.alt{opacity:0}
 .pic:hover img.alt,.pic.on img.alt{opacity:1}
 .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#7d7a72;font-size:14px;background:repeating-linear-gradient(135deg,#dedad0 0 14px,#d4d0c5 14px 28px)}
-.card h3{font-size:28px;margin:14px 0 4px;text-transform:capitalize}
+.card h3{font-size:22px;margin:10px 0 2px;text-transform:capitalize}
 .card .rate{color:#4a4e55;font-size:15px}
 .empty{padding:0 clamp(16px,4vw,56px) 28px;color:#4a4e55}
-.dash{height:6px;margin:32px 0 0;background:repeating-linear-gradient(90deg,var(--tarmac) 0 56px,transparent 56px 104px);opacity:.18}
+.dash{height:4px;margin:20px 0 0;background:repeating-linear-gradient(90deg,var(--tarmac) 0 56px,transparent 56px 104px);opacity:.18}
 
 /* contact */
-.contact{background:var(--hivis);padding:clamp(48px,7vw,96px) clamp(16px,4vw,56px);display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:end}
-.contact h2{font-size:clamp(56px,9vw,140px)}
-.contact a.big{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(36px,5vw,72px);text-decoration:none;display:block}
+.contact{background:var(--hivis);padding:clamp(32px,4vw,56px) clamp(16px,4vw,56px);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:end}
+.contact h2{font-size:clamp(36px,5vw,64px)}
+.contact a.big{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(28px,3.5vw,44px);text-decoration:none;display:block}
 .contact p{margin:8px 0 0;font-weight:600}
 
-@media(max-width:820px){.hero{grid-template-columns:1fr;min-height:0}.frame{max-width:340px;transform:rotate(2deg)}}
+@media(max-width:820px){.hero{grid-template-columns:1fr;min-height:0}.frame{max-width:260px;transform:rotate(2deg)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero h1{animation:none}.pic img{transition:none}}
 </style>
 </head>
@@ -86,31 +87,54 @@ a{color:inherit}
 /* ============ EDIT THIS PART ============ */
 const CONFIG = {
   brand: "7th Gear",
-  phone: "+91 00000 00000",
-  location: "Pickup: your address here",
+  phone: "+91 00000 00000",      // <- put your friend's phone number
+  location: "Pickup: your address here",   // <- put the pickup address
 
-  // Your GitHub repo that holds the photos (leave github empty to see demo placeholders)
-  github: "Nag685",
-  repo: "7th-gear-rental",
-  branch: "main",
+  imageBase: "7thgear/",   // folder with all photos, next to this index.html
 
-  // Folder that holds all the photos, relative to this index.html
-  imageBase: "7thgear/",
-
-  // Tell the site which photo is which. One line per product:
-  // photos = [front photo, second photo (optional, shows on hover)]
+  // One line per product. photos = [front photo, optional second photo (shows on hover or tap)]
   products: [
-    // { cat: "jackets", name: "Black riding jacket", photos: ["1000028442.jpg", "1000028443.jpg"] },
-    // { cat: "gloves",  name: "Leather gloves",      photos: ["1000028450.jpg"] },
+    { cat: "jackets", name: "Rynox mesh jacket, grey and black", photos: ["1000028472.jpg"] },
+    { cat: "jackets", name: "Rynox jacket, black and white", photos: ["1000028476.jpg"] },
+    { cat: "jackets", name: "Honda Rynox jacket, black and red", photos: ["1000028486.jpg"] },
+    { cat: "jackets", name: "Rynox mesh jacket, grey and neon", photos: ["1000028482.jpg"] },
+    { cat: "jackets", name: "Rynox mesh jacket, black and white", photos: ["1000028491.jpg"] },
+    { cat: "jackets", name: "Mesh jacket, black and grey", photos: ["1000028498.jpg"] },
+    { cat: "jackets", name: "Rynox jacket, black and neon", photos: ["1000028506.jpg"] },
+    { cat: "jackets", name: "Rynox jacket, black and orange", photos: ["1000028501.jpg"] },
+    { cat: "pants", name: "Mesh riding pants, black", photos: ["1000028457.jpg"] },
+    { cat: "pants", name: "Rynox pants, grey stripe", photos: ["1000028462.jpg"] },
+    { cat: "pants", name: "Rynox mesh cargo pants", photos: ["1000028466.jpg"] },
+    { cat: "pants", name: "Rynox Advento Pro pants", photos: ["1000028471.jpg"] },
+    { cat: "pants", name: "Viaterra pants, black", photos: ["1000028496.jpg"] },
+    { cat: "pants", name: "Riding pants, black and orange", photos: ["1000028463.jpg"] },
+    { cat: "shoes", name: "Raida boots, grey", photos: ["1000028517.jpg"] },
+    { cat: "shoes", name: "Gadsyll lace-up boots, brown", photos: ["1000028520.jpg"] },
+    { cat: "shoes", name: "Gadsyll boots, brown", photos: ["1000028518.jpg"] },
+    { cat: "shoes", name: "Gadsyll boots, black", photos: ["1000028522.jpg"] },
+    { cat: "gloves", name: "Viaterra gloves, black and neon", photos: ["1000028510.jpg"] },
+    { cat: "gloves", name: "Rynox Advento Pro gloves, black", photos: ["1000028508.jpg"] },
+    { cat: "gloves", name: "Rynox carbon gloves, black", photos: ["1000028512.jpg"] },
+    { cat: "gloves", name: "Tarmac gloves, black", photos: ["1000028514.jpg"] },
+    { cat: "gloves", name: "Rynox gloves, black and red", photos: ["1000028511.jpg"] },
+    { cat: "gloves", name: "Rynox short gloves, grey and green", photos: ["1000028507.jpg"] },
+    { cat: "gloves", name: "Rynox gloves, black and neon", photos: ["1000028509.jpg"] },
+    { cat: "gloves", name: "Cramster gloves, black and white", photos: ["1000028515.jpg"] },
+    { cat: "gloves", name: "Rynox gloves, black and tan", photos: ["1000028513.jpg"] },
+    { cat: "accessories", name: "Lenskart Boost polarized sunglasses", photos: ["1000028525.jpg"] },
+    { cat: "helmets", name: "Blue snake-graphic helmet", photos: ["1000028447.jpg", "1000028442.jpg"] },
+    { cat: "helmets", name: "Axor helmet, grey and neon", photos: ["1000028451.jpg", "1000028452.jpg"] },
+    { cat: "helmets", name: "LS2 helmet, white, red and blue", photos: ["1000028453.jpg", "1000028455.jpg"] },
   ],
 
-  // Sections on the page (cat above must match a folder name here)
+  // Sections on the page (cat above must match a folder name here). fit: "cover" fills the card, "contain" shows the whole photo.
   categories: [
-    { folder: "jackets",     title: "Jackets",     blurb: "Riding jackets for every season.", rate: "" },
-    { folder: "pants",       title: "Pants",       blurb: "Protective riding pants.",         rate: "" },
-    { folder: "shoes",       title: "Shoes",       blurb: "Riding shoes and boots.",          rate: "" },
-    { folder: "gloves",      title: "Gloves",      blurb: "Gloves for grip and protection.",  rate: "" },
-    { folder: "accessories", title: "Accessories", blurb: "The extras to finish the kit.",    rate: "" }
+    { folder: "jackets", title: "Jackets", blurb: "Riding jackets for every season.", rate: "", fit: "cover" },
+    { folder: "pants",   title: "Pants",   blurb: "Protective riding pants.",         rate: "", fit: "cover" },
+    { folder: "shoes",   title: "Shoes",   blurb: "Riding boots.",                    rate: "", fit: "contain" },
+    { folder: "gloves",  title: "Gloves",  blurb: "Gloves for grip and protection.",  rate: "", fit: "cover" },
+    { folder: "helmets", title: "Helmets", blurb: "Full-face helmets.",               rate: "", fit: "contain" },
+    { folder: "accessories", title: "Accessories", blurb: "The extras to finish the kit.", rate: "", fit: "contain" }
   ]
 };
 /* ======================================== */
@@ -164,7 +188,8 @@ function card(p, c) {
   pic.className = "pic"; pic.type = "button";
   pic.setAttribute("aria-label", p.name + (p.alt ? ": show other view" : ""));
   if (p.main) {
-    pic.innerHTML = `<img src="${p.main}" alt="${p.name}" loading="lazy">` + (p.alt ? `<img class="alt" src="${p.alt}" alt="" loading="lazy">` : "");
+    const fit = `style="object-fit:${c.fit || "cover"}"`;
+    pic.innerHTML = `<img src="${p.main}" alt="${p.name}" loading="lazy" ${fit}>` + (p.alt ? `<img class="alt" src="${p.alt}" alt="" loading="lazy" ${fit}>` : "");
     if (p.alt) pic.addEventListener("click", () => pic.classList.toggle("on"));
   } else pic.innerHTML = `<div class="ph">Photo</div>`;
   el.append(pic);
