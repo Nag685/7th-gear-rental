@@ -218,6 +218,32 @@ footer .btn{display:flex;margin-bottom:10px}
   .logo{width:32px;height:32px}
 }
 
+
+/* ===== FULL-WIDTH HERO + BIG BRAND ===== */
+.wrap{max-width:1560px;padding:0 clamp(20px,4.5vw,72px)}
+.hero{min-height:calc(100vh - 20px);display:flex;align-items:center;padding:110px 0 70px;
+  background:
+   radial-gradient(900px 600px at 78% 45%,rgba(255,45,58,.32),transparent 62%),
+   radial-gradient(700px 500px at 5% 100%,rgba(255,107,87,.12),transparent 60%),
+   linear-gradient(115deg,transparent 58%,rgba(255,45,58,.07) 58.2%,rgba(255,45,58,.07) 64%,transparent 64.2%),var(--bg)}
+.hero-grid{width:100%;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,90px)}
+.hero h1{font-size:clamp(72px,11.5vw,210px);line-height:.84;letter-spacing:.005em;max-width:none}
+.hero h1 span{display:block;color:var(--text)}
+.hero h1 em{display:block;font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(17px,1.5vw,22px);max-width:560px;margin:26px 0 34px}
+.hero .btn{padding:14px 26px;font-size:16px}
+.collage{height:clamp(500px,46vw,760px)}
+.collage::before{content:"";position:absolute;inset:8% 2%;background:radial-gradient(closest-side,rgba(255,45,58,.45),transparent);filter:blur(40px);z-index:0}
+.badge{font-size:clamp(18px,1.6vw,26px);padding:12px 22px}
+.logo{width:44px;height:44px}
+@media(max-width:900px){
+  .hero{min-height:0;padding:100px 0 56px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(70px,22vw,130px)}
+  .collage{height:400px}
+  .logo{width:36px;height:36px}
+}
+
 /* LIGHTBOX */
 .lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;cursor:zoom-out}
 .lb.open{display:flex}
@@ -241,7 +267,7 @@ footer .btn{display:flex;margin-bottom:10px}
 
 <nav>
   <div class="wrap nav-in">
-    <a href="#top" class="brand"><svg class="logo"><use href="#logo"/></svg><b>Bikers <span>Gumet</span></b></a>
+    <a href="#top" class="brand" aria-label="Bikers Gumet"><svg class="logo"><use href="#logo"/></svg></a>
     <div class="nav-links">
       <a href="#how">How it works</a>
       <a href="#catalog">Collection</a>
@@ -255,8 +281,8 @@ footer .btn{display:flex;margin-bottom:10px}
   <div class="wrap hero-grid">
   <div class="hero-text">
     <span class="tag">Jayanagar, Bangalore</span>
-    <h1>Ride in <em>proper</em> gear.</h1>
-    <p>Bike riding gear for rent. Jackets, pants, gloves, boots, helmets and accessories, so you ride protected without buying a full kit.</p>
+    <h1><span>Bikers</span><em>Gumet</em></h1>
+    <p>Bike riding gear on rent in Jayanagar. Jackets, pants, gloves, boots and helmets, so you ride protected without buying a full kit.</p>
     <div class="cta">
       <a class="btn btn-primary callLink" href="#">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>
